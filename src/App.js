@@ -2,20 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
 
-// const movies = [
-//   "가가가",
-//   "나나나",
-//   "다다다",
-//   "라라라"
-// ]
-
-// const moviePosters = [
-//   "https://upload.wikimedia.org/wikipedia/ko/c/c3/%EB%82%B4_%EC%9D%B4%EB%A6%84%EC%9D%80_%EC%B9%B8_%EC%98%81%ED%99%94_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
-//   "http://img.hani.co.kr/imgdb/resize/2017/0306/00500005_20170306.JPG",
-//   "http://imgmovie.naver.com/mdi/mi/0398/39841_P03_231710.jpg",
-//   "http://file.thisisgame.com/upload/tboard/user/2016/07/08/20160708061954_5657.jpg"
-// ]
-
 class App extends Component {
   // componentWillMount() {
   //   console.log("componentWillMount");

@@ -25,20 +25,31 @@ class App extends Component {
     //     ]
     //   })
     // }, 3000)
-    fetch('https://reqres.in/api/users?page=2')
-    .then(res => res.json())
-    .then(json => console.log(json))
-    .catch(err => {
-      console.log(err);
-    })
+    this._getList();
   }
 
   _renderMovie = () => {
-    const v = this.state.movieData.map((mv, index) => {
-      return <Movie title={mv.title} poster={mv.poster} key={index} /> 
+    const v = this.state.movieData.map((mv) => {
+      return <Movie title={mv.first_name} poster={mv.avatar} key={mv.id} /> 
     })
 
     return v;
+  }
+
+  _getList = async () => {
+    const movieData = await this._callApi();
+    this.setState({
+      movieData
+    })
+  }
+
+  _callApi = () => {
+    return fetch('https://reqres.in/api/users?page=2')
+    .then(res => res.json())
+    .then(json => json.data)
+    .catch(err => {
+      console.log(err);
+    })
   }
 
   render() {

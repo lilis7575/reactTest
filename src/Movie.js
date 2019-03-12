@@ -26,11 +26,11 @@ import './Movie.css';
 //   }
 // }
 
-function Movie({title, poster}) {
+function Movie({title, subtitle, poster}) {
   return (
       <div>
         <MoviePoster poster={poster} title={title} />
-        <h1>{title}</h1>
+        <h1>{title}. {subtitle}</h1>
       </div>
   )
 }
@@ -41,7 +41,7 @@ Movie.propTypes = {
 
 function MoviePoster({poster, title}) {
   return (
-    <img src={poster} alt={title} width="320px" />
+    <img src={poster} alt={title} className="avatar"/>
   )
 }
 

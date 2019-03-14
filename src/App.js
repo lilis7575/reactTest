@@ -1,5 +1,16 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
+import { createPortal } from 'react-dom';
+
+
+
+class Portal extends Component {
+  render() {
+    return createPortal(<Message/>, document.getElementById("touchme"));
+  }
+}
+
+const Message = () => "just touch";
 
 
 class ReturnType extends Component {
@@ -19,6 +30,7 @@ class App extends Component {
     return (
       <Fragment>
         <ReturnType />
+        <Portal></Portal>
       </Fragment>
     );
   }
